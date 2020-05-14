@@ -16,6 +16,9 @@ h1, p {
     font-family: 'Josefin Sans', 'sans-serif';
 }
 
+.page {
+    min-height: 100vh;
+}
 
 /* dividing the site between two colums */
 .leftside {
@@ -24,16 +27,13 @@ h1, p {
     background: url(./images/bg-pattern-desktop.svg);
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
 }
 
 .rightside {
     width: 50%;
     float: right;
-    background: url(./images/hero-desktop.jpg);
-    background-repeat: no-repeat;
-    height: 100vh;
 }
+
 
 /* Top content */
 
@@ -103,7 +103,7 @@ form input:focus:invalid {
 
 #subscribe-box {
     height: 6vh;
-    width: 26vw;
+    width: 70%;
     border-radius: 1.6vw;
     border: 2px solid hsl(0, 36%, 70%);
     padding: 0.3vw 1.3vw;
