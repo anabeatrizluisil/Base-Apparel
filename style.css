@@ -12,6 +12,7 @@
     color: hsl(228, 45%, 44%); 
 }
 
+
 h1, p {
     font-family: 'Josefin Sans', 'sans-serif';
 }
@@ -19,20 +20,18 @@ h1, p {
 .page {
     min-height: 100vh;
     display: flex;
-    flex-direction: row;
 }
 
 /* dividing the site between two colums */
 .leftside {
-    width: 50%;
+    width: 60%;
     background: url(./images/bg-pattern-desktop.svg);
+    background-color: linear-gradient(135deg, white, #fff5f5), linear-gradient(135deg, #f8bfbf 0%, #ee8c8c);
     background-size: cover;
 }
 
-
-
 .rightside {
-    width: 50%;
+    width: 40%;
 }
 
 .rightside img {
@@ -41,18 +40,28 @@ h1, p {
 }
 
 
+/* Images */
+
+#desktop-img {
+    display: block;
+}
+
+#mobile-img {
+    display: none;
+}
+
+
 /* Top content */
 
 .top-content {
     position: relative;
     width: 100%;
-    height: 16vh;
 }
+
 .top-content img {
     position: absolute;
-    top: 50%;
-    left: 20%;
-    transform: translate(0, -50%);
+    margin-top: 50px;
+    left: 10%;
 }
 
 /*container */
@@ -91,6 +100,10 @@ h1, p {
     color: #dbadad;
     margin-top: 20px;
     text-align: justify;
+}
+
+.central-text {
+    width: 70%;
 }
 
 
@@ -133,14 +146,50 @@ input::placeholder {
     background-image: linear-gradient(135deg, white, #f09898);
 }
 
-@media only screen and (max-device-width: 480px) {
-    /* styles for mobile browsers smaller than 480px; (iPhone) */
+@media only screen and (max-device-width: 600px) {
+    
 
-    .rightside {
-        width: 50%;
-        float: right;
-        background: url(./images/hero-mobile.jpg);
-        background-repeat: no-repeat;
-        height: 100vh;
-    }
+  .page {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .leftside {
+      order: 2;
+      width: 100%;
+  }
+
+  .rightside {
+      order: 1;
+      margin-top: 30%;
+      width: 100%;
+  }
+
+
+  .bottom-title {
+      text-align: center;
+      padding: 0;
+      margin: 0;
+  }
+
+  .container {
+      max-width: 100%;
+  }
+
+  .bottom-content p {
+      text-align: center;
+  }
+  
+  .central-text {
+      width: 100%;
+  }
+
+  #subscribe-box {
+      width: 100%;
+  }
+
+  .btn {
+      width: 12vw;
+      margin-left: -10%;
+  }
  }
